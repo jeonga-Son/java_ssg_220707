@@ -8,6 +8,8 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
+        int wiseSayinglastId = 0;
+
         outer:
         while (true) {
             System.out.printf("명령) ");
@@ -22,7 +24,8 @@ public class App {
                     String content = sc.nextLine().trim();
                     System.out.printf("작가 : ");
                     String author = sc.nextLine().trim();
-                    System.out.println("1번 명언이 등록되었습니다.");
+                    int id = ++wiseSayinglastId;
+                    System.out.printf("%d번 명언이 등록되었습니다.\n", id);
                     break;
 
                 case "목록" :
