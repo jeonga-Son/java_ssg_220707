@@ -18,11 +18,15 @@ public class App {
                     break outer;
 
                 case "등록" :
-                    System.out.print("명언 : ");
-                    String str = sc.nextLine();
-                    System.out.print("작가 : ");
-                    String str2 = sc.nextLine();
+                    System.out.printf("명언 : ");
+                    String content = sc.nextLine().trim();
+                    System.out.printf("작가 : ");
+                    String author = sc.nextLine().trim();
                     System.out.println("1번 명언이 등록되었습니다.");
+                    break;
+
+                case "목록" :
+                    System.out.println("|  번호  |  작가  |  명언  |");
             }
         }
 
