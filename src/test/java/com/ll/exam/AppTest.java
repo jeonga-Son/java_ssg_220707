@@ -29,6 +29,12 @@ public class AppTest {
     public void 표준출력을_리다이렉션하여_결과를_문자열로_받기() throws IOException {
         // 표준출력을 리다이렉션
         ByteArrayOutputStream output = new ByteArrayOutputStream();
+        //This class implements an output stream in which the data is written into a byte array.
+        // The buffer automatically grows as data is written to it.
+        // The data can be retrieved using toByteArray() and toString().
+        //Closing a ByteArrayOutputStream has no effect.
+        // The methods in this class can be called after the stream has been closed without generating an IOException.
+
         System.setOut(new PrintStream(output));
 
         System.out.println("안녕");
