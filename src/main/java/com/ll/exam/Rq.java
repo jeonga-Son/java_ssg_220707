@@ -24,7 +24,7 @@ public class Rq {
                 String[] paramNameAndValue = paramBit.split("=", 2);
 
                 if (paramNameAndValue.length == 1) {
-                    continue;
+                    continue; //return;도 가능한지?
                 }
 
                 String paramName = paramNameAndValue[0].trim();
