@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FileDBTest {
 
@@ -13,6 +14,13 @@ public class FileDBTest {
     void beforeEach() {
         Util.deleteDir("test_data");
         Util.mkdir("test_data");
+    }
+
+    @Test
+    void 파일에_숫자_저장() {
+        Util.saveNumberToFile("test_data/last_id.txt", 1);
+        int rs = Util.readNumberFromFile("test_data/last_id.txt", 0);
+        assertEquals(1, rs);
     }
 
     @Test
