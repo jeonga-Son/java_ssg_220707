@@ -4,6 +4,23 @@ import java.io.*;
 import java.util.Scanner;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
+
+    @Test
+    void 파일에_내용쓰기() {
+        Util.mkdir("test_data");
+        Util.saveToFile("test_data/1.json", "내용");
+    }
+
+    @Test
+    void 파일에_저장된_내용_가져오기() {
+        Util.mkdir("test_data");
+        Util.saveToFile("test_data/1.json", "내용");
+
+        String body = Util.getFromFile ("test_data/1.json");
+
+        System.out.println(body);
+    }
+
     @Test
     public void Rq__getPath() {
         Rq rq = new Rq("삭제?id=1");
