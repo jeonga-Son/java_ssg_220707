@@ -2,11 +2,11 @@ package com.ll.exam;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WiseSayingRepository {
+public class WiseSayingService {
     public List<WiseSaying> wiseSayings;
     public int wiseSayingLastId;
 
-    WiseSayingRepository() {
+    WiseSayingService() {
         wiseSayings = new ArrayList<>();
         wiseSayingLastId = 0;
     }
